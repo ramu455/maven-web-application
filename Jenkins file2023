@@ -1,0 +1,27 @@
+node{
+    def mavenhome = tool name: 'maven3.8.5'
+    // Get the code from Github Repo
+    stage('checkoutcode'){
+        git branch: 'development', url: 'https://github.com/ramu455/maven-web-application.git'
+    }
+    
+    //Do the build by using maven build tool
+    stage('build'){
+        sh "${mavenhome}/bin/mvn clean package"
+    }
+    
+    //execute the sonarqube report
+    stage('execute sonarqube report'){
+        sh "${mavenhome}/bin/mvn sonar:sonar"
+    }
+    //upload artifacts into artifact repo
+    stage('upload artifact'){
+        sh "${mavenhome}/bin/mvn deploy"
+    }
+    // deploy application into tomcat server
+    stage('deployapplicationintotomcatserver'){
+      sshagent(['deploy_user']) {
+    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  ec2-user@13.232.77.96:/opt/apache-tomcat-9.0.65/webapps"
+}
+    }
+}
