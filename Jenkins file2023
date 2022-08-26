@@ -51,7 +51,7 @@ node{
       sshagent(['deploy_user']) {
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  ec2-user@43.204.30.67:/opt/apache-tomcat-9.0.65/webapps"
 }
-
+}
 */
 }//Try closing
    catch(e){
