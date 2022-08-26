@@ -54,6 +54,7 @@ node{
 }
 */
    }//Try closing c
+   catch (e){
    currentBuild.result = "FAILED"
    throw e
    }
