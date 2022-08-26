@@ -53,9 +53,9 @@ node{
 }
 }
 */
-}//Try closing
-   catch(e){
+   }//Try closing c
    currentBuild.result = "FAILED"
+   throw e
    }
    finally{
    sendSlackNotifications(currentBuild.result)
