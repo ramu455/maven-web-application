@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.235.8.43:9980/repository/Javaapp-Release/</url>
+	      <url>http://3.110.184.191:9980/repository/Ramapp-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.235.8.43:9980/repository/Javaapp-Snapshot/</url>
+	      <url>http://3.110.184.191:9980/repository/Ramapp-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
