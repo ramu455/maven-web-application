@@ -27,7 +27,7 @@
 
 node{
      properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
-    def mavenhome = tool name: 'maven3.8.5'
+    def mavenhome = tool name: 'maven3.8.6'
     // Get the code from Github Repo
     stage('checkoutcode'){
         git branch: 'development', url: 'https://github.com/ramu455/maven-web-application.git'
@@ -49,7 +49,7 @@ node{
     // deploy application into tomcat server
     stage('deployapplicationintotomcatserver'){
       sshagent(['deploy_user']) {
-    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  ec2-user@43.204.30.67:/opt/apache-tomcat-9.0.65/webapps"
+    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  ec2-user@3.108.41.103:/opt/apache-tomcat-9.0.65/webapps"
 }
 }
 */
