@@ -3,6 +3,6 @@
 sonar.projectKey=JenkinsToken
 sonar.projectName=maven-web-application
 sonar.projectVersion=4.0.0
-sonar.sources=.
+"sonar.sources=."
 sonar.language=java
 sonar.sourceEncoding=UTF-8
