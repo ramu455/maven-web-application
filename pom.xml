@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://43.204.232.101:8081/repository/Release/</url>
+	      <url>http://3.110.47.250:8081/repository/Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://43.204.232.101:8081/repository/SnapshotRepositrory/</url>
+	      <url>http://3.110.47.250:8081/repository/SnapshotRepositrory/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
