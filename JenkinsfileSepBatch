@@ -9,9 +9,12 @@ options {
   timestamps()
 }
 
+/*
+
 triggers {
   cron '* * * * *'
 }
+*/
 
 
 
