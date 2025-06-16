@@ -7,8 +7,7 @@ node {
 
     echo "The Build Number is: ${env.BUILD_NUMBER}"
 
-   // properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), pipelineTriggers([cron('* * * * *')])])
-   
+   // properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3'))
         stage('checkout code from github'){
             buildName "QA - ${env.BUILD_NUMBER}"
              buildDescription 'From Dev To QA'
