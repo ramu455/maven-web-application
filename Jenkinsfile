@@ -1,5 +1,11 @@
 node {
     def mavenHome = tool name: "maven3.9.0", type: 'maven'
+
+    echo "The Node Name is: ${env.NODE_NAME}"
+
+    echo "The Job Name is: ${env.JOB_NAME}"
+
+    echo "The Build Number is: ${env.BUILD_NUMBER}"
    
         stage('checkout code from github'){
         git credentialsId: '24504816-0753-4738-9361-fc75adba7447', url: 'https://github.com/ramu455/maven-web-application.git'
